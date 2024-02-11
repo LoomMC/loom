@@ -1,32 +1,17 @@
-# Prerequisites
-*.d
+# VSCode
+.settings/
+.vscode/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# IntelliJ/Idea
+.factorypath
+.idea
+*.iml
+*.ipr
+*.iws
 
-# Precompiled Headers
-*.gch
-*.pch
+# Windows
+*.db
+$RECYCLE.BIN/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# Mac
+.DS_Store
