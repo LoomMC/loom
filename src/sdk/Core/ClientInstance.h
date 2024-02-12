@@ -8,6 +8,6 @@ class ClientInstance {
 public:
     LocalPlayer* getLocalPlayer()
     {
-        return CallVFunc<27, LocalPlayer*>(this);
+        return CallVFunc<28, LocalPlayer*>(this);
     }
 };
