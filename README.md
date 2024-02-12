@@ -10,3 +10,5 @@ Examples of using the Loom API include:
 
 ## Contributing
 If the Loom API does not support a specific function or structure, or you see an issue in the API, we encourage you to contribute. Check our [guidelines](./CONTRIBUTING.md) to see what to do.
+
+![Stats](https://repobeats.axiom.co/api/embed/85a065e2f47fc1228ac8393c021e8cb4feda1f18.svg)
