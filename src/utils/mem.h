@@ -28,3 +28,10 @@ Ret& DirectAccess(Type* type, size_t offset) {
 	AS_FIELD(type, name, get##name);                                    \
 	type& get##name() const { return DirectAccess<type>(ptr, offset); } \
 	void set##name(type v) const { DirectAccess<type>(ptr, offset) = std::move(v); }
+
+
+template <unsigned int FunctionIndex, typename ReturnType, typename... TArgs>
+static inline ReturnType CallVFunc(void* objectPtr, TArgs... args) {
+    using fn = ReturnType(__thiscall*)(void*, decltype(args)...);
+    return (*static_cast<fn**>(objectPtr))[FunctionIndex](objectPtr, args...);
+}
