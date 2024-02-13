@@ -5,6 +5,8 @@
 #include <type_traits>
 #include <typeinfo>
 
+#include "../include/minhook/MinHook.h"
+
 template <typename Ret, typename Type>
 Ret& DirectAccess(Type* type, size_t offset) {
     union {
