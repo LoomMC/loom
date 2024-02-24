@@ -5,6 +5,6 @@
 
 class ItemStack {
 public:
-    Item* getItem(void);
+    //Item* getItem(void);
     BUILD_ACCESS(this, char, ItemStackCount, 0x22);
 };
