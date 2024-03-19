@@ -15,3 +15,4 @@
 // DirectX, if you are not then you use OpenGL.
 
 #include <string>
+#include <vector>
