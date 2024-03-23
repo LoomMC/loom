@@ -2,6 +2,8 @@
 #define WEAVE_H
 
 #include <cstddef>
+#include <cstdint>
+#include <cstring>
 
 #ifdef _WIN32
 #include <windows.h> // For Windows memory management and function pointers
@@ -27,6 +29,7 @@ namespace loom
         };
 
         WeaveHookStatus CreateHook(WeaveFuncPtr targetFunc, WeaveFuncPtr detourFunc, WeaveFuncPtr* originalFuncOut);
+        WeaveHookStatus RemoveHook(WeaveFuncPtr targetFunc, WeaveFuncPtr originalFunc);
     }
 }
 
