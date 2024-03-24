@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <cstring>
+#include <string>
 
 #ifdef _WIN32
 #include <windows.h> // For Windows memory management and function pointers
@@ -28,8 +29,15 @@ namespace loom
             WeaveErrorUnsupported,    // operation not supported on current platform
         };
 
+        template <typename R, typename... Args>
+        R CallFunc(void* func, Args... args)
+        {
+            return ((R(*)(Args...))func)(args...);
+        }
+
         WeaveHookStatus CreateHook(WeaveFuncPtr targetFunc, WeaveFuncPtr detourFunc, WeaveFuncPtr* originalFuncOut);
         WeaveHookStatus RemoveHook(WeaveFuncPtr targetFunc, WeaveFuncPtr originalFunc);
+        WeaveFuncPtr FindSignature(std::string signature);
     }
 }
 
